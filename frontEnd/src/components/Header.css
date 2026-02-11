@@ -1,0 +1,130 @@
+/* Header Container */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo and Brand Section */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-logo {
+  width: 36px;
+  height: 36px;
+  background-color: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header-logo-icon {
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  stroke-width: 2.5;
+}
+
+.header-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  white-space: nowrap;
+}
+
+/* Buttons Section */
+.header-buttons {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  outline: none;
+  white-space: nowrap;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+}
+
+.btn-outline:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: 1px solid #2563eb;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+
+  .header-title {
+    font-size: 1rem;
+  }
+
+  .header-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-logo-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .btn {
+    padding: 0.45rem 1rem;
+    font-size: 0.8125rem;
+  }
+
+  .header-buttons {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.4rem 0.875rem;
+    font-size: 0.75rem;
+  }
+}
