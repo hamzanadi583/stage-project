@@ -1,7 +1,9 @@
 import React from 'react';
 import './Header.css';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const nav = useNavigate();
   return (
     <nav className="header">
       <div className="header-container">
@@ -32,10 +34,10 @@ const Header = () => {
 
         {/* Auth Buttons */}
         <div className="header-buttons">
-          <button className="btn btn-outline">
+          <button className="btn btn-outline" onClick={() => nav('/signup')} >
             S'inscrire
           </button>
-          <button className="btn btn-primary">
+          <button className="btn btn-primary" onClick={() => nav('/login')}>
             Se connecter
           </button>
         </div>
