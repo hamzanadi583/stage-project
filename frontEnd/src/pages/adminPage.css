@@ -1,0 +1,320 @@
+/* Admin Page Layout */
+.admin-page {
+  background-color: #f9fafb; /* Light gray from your Home hero */
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header Area */
+.admin-header {
+  background-color: #ffffff;
+  padding: 2rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-header .admin-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.admin-subtitle {
+  color: #6b7280;
+  margin: 0.25rem 0 0 0;
+}
+
+/* Stats Cards - Borrowing from .feature-card */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.stat-icon.blue { background-color: #eff6ff; color: #2563eb; }
+.stat-icon.green { background-color: #ecfdf5; color: #10b981; }
+.stat-icon.orange { background-color: #fff7ed; color: #f97316; }
+
+.stat-label { color: #6b7280; font-size: 0.875rem; margin: 0; }
+.stat-value { font-size: 1.5rem; font-weight: 700; color: #1f2937; margin: 0; }
+
+/* Table Section - Borrowing .feature-card hover effect */
+.content-card {
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.card-header { padding: 1.25rem 1.5rem; border-bottom: 1px solid #e5e7eb; }
+.card-title { font-size: 1.125rem; font-weight: 600; margin: 0; }
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th {
+  background-color: #f9fafb;
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #6b7280;
+  letter-spacing: 0.05em;
+}
+
+.admin-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.status-pill {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-pill.active { background: #d1fae5; color: #065f46; }
+
+.btn-primary-admin {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.btn-primary-admin:hover { background-color: #1d4ed8; }
+
+/* Clickable Stats as Tabs */
+.stat-card.clickable {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.stat-card.clickable:hover {
+  border-color: #2563eb;
+  background-color: #f8faff;
+}
+
+.active-tab {
+  border-left: 5px solid #2563eb !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+  background-color: #ffffff;
+}
+
+/* Action Buttons Styles */
+.btn-action {
+  border: none;
+  background: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: 0.2s;
+  font-size: 1.1rem;
+}
+
+.btn-action.edit {
+  color: #2563eb;
+}
+
+.btn-action.edit:hover {
+  background-color: #eff6ff;
+}
+
+.btn-action.delete {
+  color: #dc3545;
+}
+
+.btn-action.delete:hover {
+  background-color: #fef2f2;
+}
+
+/* Styling for the table headers */
+.admin-table th {
+  border-top: none;
+  border-bottom: 2px solid #edf2f7;
+}
+
+.btn-admin-add {
+  /* Reset and Base Styles */
+  background-color: #2563eb; /* Your primary blue */
+  color: #ffffff;
+  border: 2px solid #2563eb;
+  border-radius: 0px; /* Force 90-degree corners */
+  padding: 10px 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase; /* Optional: adds to the "sharp" look */
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Hover State: Outline effect */
+.btn-admin-add:hover {
+  background-color: transparent;
+  color: #2563eb;
+  border-color: #2563eb;
+  /* Optional: subtle inner shadow to emphasize the "hollow" look */
+  box-shadow: inset 0 0 0 1px #2563eb;
+}
+
+/* Active/Click State */
+.btn-admin-add:active {
+  background-color: #f1f5f9;
+  transform: scale(0.98);
+}
+
+/* Container for the Title and Search */
+.admin-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Aligns them to the bottom for a cleaner baseline */
+  padding: 25px 30px;
+  background: #ffffff;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+/* Title Styling */
+.card-title-sharp {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1f2937;
+  margin: 0;
+  border-left: 5px solid #2563eb; /* Primary color accent */
+  padding-left: 15px;
+}
+
+/* Search Box Wrapper */
+.search-wrapper-sharp {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Wider than the default */
+}
+
+.search-icon-sharp {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 1.1rem;
+}
+
+.search-input-sharp {
+  width: 100%;
+  padding: 12px 15px 12px 45px; /* Extra padding on left for icon */
+  background-color: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 0; /* 90-degree corners */
+  font-size: 0.95rem;
+  color: #1f2937;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+/* Focus State: Sharp Blue Border */
+.search-input-sharp:focus {
+  background-color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 5px 5px 0px rgba(37, 99, 235, 0.1); /* Industrial shadow */
+}
+
+/* Hover State */
+.search-input-sharp:hover {
+  border-color: #d1d5db;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .admin-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .search-wrapper-sharp {
+    max-width: 100%;
+  }
+}
+.clickable-row {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.clickable-row:hover {
+  background-color: #f8fafc !important; /* Light highlight on hover */
+}
+
+/* Ensure buttons don't inherit pointer cursor logic weirdly */
+.btn-action {
+  position: relative;
+  z-index: 2;
+}
+
+/* Styling for the new icon color to match your blue/green theme */
+.stat-icon.purple {
+    background-color: #f5f3ff;
+    color: #7c3aed;
+}
+
+/* Ensure the stat-card styles apply to the button container */
+.stat-card.clickable {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.stat-card.clickable:hover {
+    transform: translateY(-2px);
+    border-color: #2563eb; /* Blue highlight on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* If you want to keep it as a button internally but look like a card: */
+.btn-stats-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}

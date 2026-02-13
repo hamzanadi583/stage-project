@@ -1,0 +1,46 @@
+.agent-page {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+.agent-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.agent-header {
+  background-color: #ffffff;
+  padding: 2rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.agent-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.agent-subtitle {
+  color: #6b7280;
+  margin: 0.25rem 0 0 0;
+}
+
+.stat-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-pointer:hover {
+  background-color: #f8fafc !important;
+}

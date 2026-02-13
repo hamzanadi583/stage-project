@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { admins, agents } from './testData'; 
+import { useDispatch } from 'react-redux';
+import { addAgent } from '../data/slice';
 
 const SignUp = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     nomComplet: '',
     email: '',
     password: '',
     confirmPassword: '',
-    statut: 'agent'  
   });
 
   const handleChange = (e) => {
@@ -24,26 +25,18 @@ const SignUp = () => {
       return;
     }
 
-    // Generate ID for staff members only
-    const prefix = formData.statut === 'admin' ? 'ADM-' : 'AGT-';
-    const newId = prefix + Math.floor(100 + Math.random() * 900);
+    const newId = 'AGT-' + Math.floor(100 + Math.random() * 900);
 
     const newUser = {
       id: newId,
       nomComplet: formData.nomComplet,
       e_mail: formData.email,
       password: formData.password,
-      statut: formData.statut,
+      statut: 'agent',
     };
 
-    // Push to the correct staff array
-    if (formData.statut === 'admin') {
-      admins.push(newUser);
-    } else {
-      agents.push(newUser);
-    }
-
-    alert(`Compte ${formData.statut} créé avec succès !`);
+    dispatch(addAgent(newUser));
+    alert('Compte agent créé avec succès !');
     navigate('/login');
   };
 
@@ -52,7 +45,7 @@ const SignUp = () => {
       <div className="card shadow border-0 p-4" style={{ maxWidth: '450px', width: '100%' }}>
         <div className="text-center mb-4">
           <h2 className="fw-bold text-primary">SubGestion</h2>
-          <p className="text-muted">Inscription du Personnel</p>
+          <p className="text-muted">Inscription (Agent par défaut)</p>
         </div>
 
         <form onSubmit={handleSubmit}>
@@ -79,7 +72,6 @@ const SignUp = () => {
               required 
             />
           </div>
-
 
           <div className="mb-3">
             <label className="form-label fw-semibold">Mot de passe</label>

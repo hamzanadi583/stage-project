@@ -1,7 +1,9 @@
 import React from 'react';
 import './Home.css';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+    const nav = useNavigate();
   return (
     <div className="homepage">
       {/* Hero Section */}
@@ -202,7 +204,7 @@ const Home = () => {
           <p className="cta-description">
             Rejoignez des centaines d'entreprises qui font confiance à notre plateforme
           </p>
-          <button className="btn btn-primary-large">
+          <button className="btn btn-primary-large" onClick={() => nav('/signup')} >
             Créer un compte gratuitement
           </button>
         </div>

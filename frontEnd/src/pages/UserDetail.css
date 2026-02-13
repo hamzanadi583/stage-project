@@ -1,0 +1,176 @@
+.profile-wrapper-light {
+    background-color: #f8fafc; /* Your original light background */
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.profile-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.back-button-link {
+    background: none;
+    border: none;
+    color: #64748b;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-main-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+}
+
+/* White Card Style with original Navy Border/Accents */
+.profile-info-card, .subscriptions-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar Styles */
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.avatar-box-green {
+    width: 70px;
+    height: 70px;
+    background-color: #dcfce7; /* Light green background */
+    color: #15803d; /* Dark green letter */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 800;
+    border-radius: 12px;
+}
+
+.user-display-name {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1f2937; /* Original Navy */
+    margin-bottom: 5px;
+}
+
+.user-type-tag {
+    background-color: #f1f5f9;
+    color: #475569;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 3px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.user-id-code {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    font-family: monospace;
+}
+
+.details-list {
+    margin-top: 35px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 20px;
+}
+
+.detail-item { margin-bottom: 20px; }
+
+.detail-item label {
+    display: block;
+    color: #94a3b8;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.detail-item p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+/* Subscriptions Section */
+.section-title-bold {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 25px;
+}
+
+.sub-row-item {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
+}
+
+.sub-row-item:hover {
+    border-color: #2563eb; /* Blue highlight from your theme */
+}
+
+.sub-row-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.status-dot-glow {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.status-dot-glow.expiré { background-color: #ef4444; }
+.status-dot-glow.actif { background-color: #10b981; }
+
+.sub-row-info h4 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.sub-row-info p {
+    margin: 3px 0 0 0;
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+.sub-row-right { text-align: right; }
+
+.price-num {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #1f2937;
+}
+
+.price-currency {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    margin-left: 5px;
+    font-weight: 700;
+}
